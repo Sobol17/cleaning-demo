@@ -47,7 +47,7 @@ def chrome(canvas,doc):
     canvas.line(48,799,547,799); canvas.line(48,40,547,40)
     canvas.setFillColor(C('#60748E')); canvas.setFont('Arial',8)
     canvas.drawString(48,811,'ЯСНО  /  САЙТ И CRM ДЛЯ КЛИНИНГА')
-    canvas.drawRightString(547,811,'31.10.2026  ·  КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ')
+    canvas.drawRightString(547,811,'03.11.2026  ·  КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ')
     canvas.drawString(48,26,'Состав пакетов, стоимость и условия обслуживания')
     canvas.drawRightString(547,26,str(doc.page)); canvas.restoreState()
 
@@ -67,5 +67,5 @@ while i<len(lines):
     else: story.append(Paragraph(fmt(l),styles['p']))
     i+=1
 OUT.parent.mkdir(parents=True,exist_ok=True)
-SimpleDocTemplate(str(OUT),pagesize=(595.27,841.89),leftMargin=48,rightMargin=48,topMargin=59,bottomMargin=54,title='Ясно: пакеты и прозрачная стоимость',author='Ясно',subject='Тарифы сайта и CRM для клининга. Иркутск. 31.10.2026').build(story,onFirstPage=chrome,onLaterPages=chrome)
+SimpleDocTemplate(str(OUT),pagesize=(595.27,841.89),leftMargin=48,rightMargin=48,topMargin=59,bottomMargin=54,title='Ясно: пакеты и прозрачная стоимость',author='Ясно',subject='Тарифы сайта и CRM для клининга. Иркутск. 03.11.2026').build(story,onFirstPage=chrome,onLaterPages=chrome)
 print(OUT)
